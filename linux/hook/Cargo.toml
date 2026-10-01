@@ -1,0 +1,14 @@
+[package]
+name = "coucou-hook"
+description = "Relays Claude Code hook events to Coucou over a Unix socket"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "coucou-hook"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1"
+# No platform-specific deps: Unix sockets and getuid() are in std / libc on Linux
